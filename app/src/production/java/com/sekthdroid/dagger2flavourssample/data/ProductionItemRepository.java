@@ -10,7 +10,11 @@ import java.util.List;
  * Project: Dagger2FlavoursSample
  * Package: com.sekthdroid.dagger2flavourssample.data
  */
-public class StubItemRepository implements ItemsRepository{
+public class ProductionItemRepository implements ItemsRepository{
+
+    public ProductionItemRepository() {
+    }
+
     @Override
     public List<Item> getItems() {
         List<Item> items = new ArrayList<>(10);

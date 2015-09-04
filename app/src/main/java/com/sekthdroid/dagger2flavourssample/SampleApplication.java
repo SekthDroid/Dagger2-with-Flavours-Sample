@@ -18,10 +18,8 @@ public class SampleApplication extends Application{
         super.onCreate();
 
         this.component = DaggerApplicationComponent.builder()
-                .applicationModule(new ApplicationModule(this))
+                .flavorApplicationModule(new FlavorApplicationModule(this))
                 .build();
-        component.injectApplication(this);
-
     }
 
     public ApplicationComponent component() {

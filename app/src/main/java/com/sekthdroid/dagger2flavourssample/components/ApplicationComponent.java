@@ -1,8 +1,10 @@
 package com.sekthdroid.dagger2flavourssample.components;
 
-import com.sekthdroid.dagger2flavourssample.ApplicationModule;
-import com.sekthdroid.dagger2flavourssample.SampleApplication;
+import android.app.Application;
+
+import com.sekthdroid.dagger2flavourssample.FlavorApplicationModule;
 import com.sekthdroid.dagger2flavourssample.base.BaseActivity;
+import com.sekthdroid.dagger2flavourssample.data.ItemsRepository;
 
 import javax.inject.Singleton;
 
@@ -14,8 +16,10 @@ import dagger.Component;
  * Package: com.sekthdroid.dagger2flavourssample.components
  */
 @Singleton
-@Component(modules = ApplicationModule.class)
+@Component(modules = FlavorApplicationModule.class)
 public interface ApplicationComponent {
-    void injectApplication(SampleApplication application);
     void injectActivity(BaseActivity activity);
+
+    Application application();
+    ItemsRepository userRepository();
 }

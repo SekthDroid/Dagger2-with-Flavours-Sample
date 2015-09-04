@@ -7,25 +7,37 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import com.sekthdroid.dagger2flavourssample.base.BaseActivity;
+import com.sekthdroid.dagger2flavourssample.components.DaggerMainActivityComponent;
+import com.sekthdroid.dagger2flavourssample.components.MainActivityComponent;
 import com.sekthdroid.dagger2flavourssample.data.ItemsRepository;
-import com.sekthdroid.dagger2flavourssample.data.StubItemRepository;
 import com.sekthdroid.dagger2flavourssample.model.Item;
 
 import java.util.List;
 
+import javax.inject.Inject;
+
 public class MainActivity extends BaseActivity {
     private ListView mList;
-    private ItemsRepository repository;
+
+    @Inject
+    ItemsRepository repository;
+
+    private MainActivityComponent component;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        this.component = DaggerMainActivityComponent.builder()
+                .applicationComponent(getApplicationComponent())
+                .activityModule(getActivityModule()).build();
+
         mList = (ListView) findViewById(R.id.list);
 
-        this.repository = new StubItemRepository();
-
+        if (repository == null){
+            return;
+        }
         List<Item> items = repository.getItems();
 
         mList.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, items));

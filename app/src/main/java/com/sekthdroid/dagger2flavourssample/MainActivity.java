@@ -1,19 +1,19 @@
 package com.sekthdroid.dagger2flavourssample;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import com.sekthdroid.dagger2flavourssample.base.BaseActivity;
 import com.sekthdroid.dagger2flavourssample.data.ItemsRepository;
 import com.sekthdroid.dagger2flavourssample.data.StubItemRepository;
 import com.sekthdroid.dagger2flavourssample.model.Item;
 
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseActivity {
     private ListView mList;
     private ItemsRepository repository;
 

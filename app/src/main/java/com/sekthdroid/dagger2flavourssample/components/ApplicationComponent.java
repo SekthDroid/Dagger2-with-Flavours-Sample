@@ -2,6 +2,7 @@ package com.sekthdroid.dagger2flavourssample.components;
 
 import com.sekthdroid.dagger2flavourssample.ApplicationModule;
 import com.sekthdroid.dagger2flavourssample.SampleApplication;
+import com.sekthdroid.dagger2flavourssample.base.BaseActivity;
 
 import javax.inject.Singleton;
 
@@ -16,4 +17,5 @@ import dagger.Component;
 @Component(modules = ApplicationModule.class)
 public interface ApplicationComponent {
     void injectApplication(SampleApplication application);
+    void injectActivity(BaseActivity activity);
 }

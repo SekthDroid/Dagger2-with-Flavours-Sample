@@ -31,7 +31,9 @@ public class MainActivity extends BaseActivity {
 
         this.component = DaggerMainActivityComponent.builder()
                 .applicationComponent(getApplicationComponent())
-                .activityModule(getActivityModule()).build();
+                .activityModule(getActivityModule())
+                .build();
+        component.inject(this);
 
         mList = (ListView) findViewById(R.id.list);
 

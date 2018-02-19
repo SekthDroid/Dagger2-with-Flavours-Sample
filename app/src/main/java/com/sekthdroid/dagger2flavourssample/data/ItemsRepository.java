@@ -1,7 +1,6 @@
 package com.sekthdroid.dagger2flavourssample.data;
 
 import com.sekthdroid.dagger2flavourssample.model.Item;
-
 import java.util.List;
 
 /**

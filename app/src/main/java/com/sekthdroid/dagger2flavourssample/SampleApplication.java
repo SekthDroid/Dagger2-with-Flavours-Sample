@@ -1,28 +1,22 @@
 package com.sekthdroid.dagger2flavourssample;
 
-import android.app.Application;
-
-import com.sekthdroid.dagger2flavourssample.components.ApplicationComponent;
-import com.sekthdroid.dagger2flavourssample.components.DaggerApplicationComponent;
+import com.sekthdroid.dagger2flavourssample.di.ApplicationComponent;
+import com.sekthdroid.dagger2flavourssample.di.DaggerApplicationComponent;
+import dagger.android.AndroidInjector;
+import dagger.android.support.DaggerApplication;
 
 /**
  * Created by SekthDroid on 04/09/15.
  * Project: Dagger2FlavoursSample
  * Package: com.sekthdroid.dagger2flavourssample
  */
-public class SampleApplication extends Application{
-    private ApplicationComponent component;
+public class SampleApplication extends DaggerApplication {
 
-    @Override
-    public void onCreate() {
-        super.onCreate();
+  @Override protected AndroidInjector<? extends DaggerApplication> applicationInjector() {
+    ApplicationComponent applicationComponent =
+        DaggerApplicationComponent.builder().application(this).build();
 
-        this.component = DaggerApplicationComponent.builder()
-                .flavorApplicationModule(new FlavorApplicationModule(this))
-                .build();
-    }
-
-    public ApplicationComponent component() {
-        return component;
-    }
+    applicationComponent.inject(this);
+    return applicationComponent;
+  }
 }

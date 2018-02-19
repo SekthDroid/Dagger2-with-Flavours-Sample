@@ -10,17 +10,16 @@ import java.util.List;
  * Project: Dagger2FlavoursSample
  * Package: com.sekthdroid.dagger2flavourssample.data
  */
-public class ProductionItemRepository implements ItemsRepository{
+public class ProductionItemRepository implements ItemsRepository {
 
-    public ProductionItemRepository() {
-    }
+  public ProductionItemRepository() {
+  }
 
-    @Override
-    public List<Item> getItems() {
-        List<Item> items = new ArrayList<>(10);
-        for (int i = 0; i < 10; i++) {
-            items.add(new Item(i, "Production item " + i));
-        }
-        return items;
+  @Override public List<Item> getItems() {
+    List<Item> items = new ArrayList<>(10);
+    for (int i = 0; i < 10; i++) {
+      items.add(new Item(i, "Production item " + i));
     }
+    return items;
+  }
 }

@@ -1,7 +1,6 @@
 package com.sekthdroid.dagger2flavourssample.annotations;
 
 import java.lang.annotation.Retention;
-
 import javax.inject.Scope;
 
 import static java.lang.annotation.RetentionPolicy.RUNTIME;

@@ -1,45 +1,43 @@
-
 apply plugin: 'com.android.application'
-apply plugin: 'android-apt'
 
 android {
-    compileSdkVersion 23
-    buildToolsVersion "23.0.0"
-    defaultConfig {
-        applicationId "com.sekthdroid.dagger2flavourssample"
-        minSdkVersion 14
-        targetSdkVersion 23
-        versionCode 1
-        versionName "1.0"
+  compileSdkVersion 26
+  buildToolsVersion '26.0.2'
+  defaultConfig {
+    applicationId "com.sekthdroid.dagger2flavourssample"
+    minSdkVersion 14
+    targetSdkVersion 26
+    versionCode 1
+    versionName "1.0"
+  }
+  buildTypes {
+    release {
+      minifyEnabled false
+      proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
     }
-    buildTypes {
-        release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-        }
+  }
+  flavorDimensions "tier"
+  productFlavors {
+    stub {
+      applicationId defaultConfig.applicationId + ".stub"
+      dimension "tier"
     }
-    productFlavors {
-        stub {
-            applicationId defaultConfig.applicationId + ".stub"
-            versionName defaultConfig.versionName + "-stage"
-            versionCode 1
-        }
-        production {
-            versionName defaultConfig.versionName + "r"
-        }
+    production {
+      dimension "tier"
     }
+  }
 
-    compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_7
-        targetCompatibility JavaVersion.VERSION_1_7
-    }
+  compileOptions {
+    sourceCompatibility JavaVersion.VERSION_1_8
+    targetCompatibility JavaVersion.VERSION_1_8
+  }
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile 'com.android.support:appcompat-v7:23.0.0'
-    compile 'com.google.dagger:dagger:2.0.1'
-    provided 'javax.annotation:jsr250-api:1.0'
-    compile 'com.google.dagger:dagger-compiler:2.0.1'
-    compile 'com.neenbedankt.gradle.plugins:android-apt:1.7'
+  implementation fileTree(dir: 'libs', include: ['*.jar'])
+  implementation 'com.android.support:appcompat-v7:26.1.0'
+  implementation 'com.google.dagger:dagger:2.11'
+  implementation 'com.google.dagger:dagger-android-support:2.11'
+  annotationProcessor 'com.google.dagger:dagger-compiler:2.11'
+  annotationProcessor 'com.google.dagger:dagger-android-processor:2.11'
 }

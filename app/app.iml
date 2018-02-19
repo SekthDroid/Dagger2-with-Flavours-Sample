@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<module external.linked.project.id=":app" external.linked.project.path="$MODULE_DIR$" external.root.project.path="$MODULE_DIR$/.." external.system.id="GRADLE" external.system.module.group="Dagger2FlavoursSample" external.system.module.version="unspecified" type="JAVA_MODULE" version="4">
+<module external.linked.project.id=":app" external.linked.project.path="$MODULE_DIR$" external.root.project.path="$MODULE_DIR$/.." external.system.id="GRADLE" type="JAVA_MODULE" version="4">
   <component name="FacetManager">
     <facet type="android-gradle" name="Android-Gradle">
       <configuration>
@@ -9,13 +9,9 @@
     <facet type="android" name="Android">
       <configuration>
         <option name="SELECTED_BUILD_VARIANT" value="stubDebug" />
-        <option name="SELECTED_TEST_ARTIFACT" value="_android_test_" />
         <option name="ASSEMBLE_TASK_NAME" value="assembleStubDebug" />
         <option name="COMPILE_JAVA_TASK_NAME" value="compileStubDebugSources" />
-        <option name="ASSEMBLE_TEST_TASK_NAME" value="assembleStubDebugAndroidTest" />
-        <option name="COMPILE_JAVA_TEST_TASK_NAME" value="compileStubDebugAndroidTestSources" />
         <afterSyncTasks>
-          <task>generateStubDebugAndroidTestSources</task>
           <task>generateStubDebugSources</task>
         </afterSyncTasks>
         <option name="ALLOW_USER_CONFIGURATION" value="false" />
@@ -26,9 +22,9 @@
       </configuration>
     </facet>
   </component>
-  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_7" inherit-compiler-output="false">
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8">
     <output url="file://$MODULE_DIR$/build/intermediates/classes/stub/debug" />
-    <output-test url="file://$MODULE_DIR$/build/intermediates/classes/androidTest/stub/debug" />
+    <output-test url="file://$MODULE_DIR$/build/intermediates/classes/test/stub/debug" />
     <exclude-output />
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/build/generated/source/apt/stub/debug" isTestSource="false" generated="true" />
@@ -43,84 +39,133 @@
       <sourceFolder url="file://$MODULE_DIR$/src/stubDebug/assets" type="java-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/stubDebug/aidl" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/stubDebug/java" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/stubDebug/jni" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/stubDebug/rs" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/stubDebug/shaders" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/build/generated/source/apt/androidTest/stub/debug" isTestSource="true" generated="true" />
       <sourceFolder url="file://$MODULE_DIR$/build/generated/source/r/androidTest/stub/debug" isTestSource="true" generated="true" />
       <sourceFolder url="file://$MODULE_DIR$/build/generated/source/aidl/androidTest/stub/debug" isTestSource="true" generated="true" />
       <sourceFolder url="file://$MODULE_DIR$/build/generated/source/buildConfig/androidTest/stub/debug" isTestSource="true" generated="true" />
       <sourceFolder url="file://$MODULE_DIR$/build/generated/source/rs/androidTest/stub/debug" isTestSource="true" generated="true" />
       <sourceFolder url="file://$MODULE_DIR$/build/generated/res/rs/androidTest/stub/debug" type="java-test-resource" />
       <sourceFolder url="file://$MODULE_DIR$/build/generated/res/resValues/androidTest/stub/debug" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTestStubDebug/res" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTestStubDebug/resources" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTestStubDebug/assets" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTestStubDebug/aidl" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTestStubDebug/java" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTestStubDebug/rs" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTestStubDebug/shaders" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/build/generated/source/apt/test/stub/debug" isTestSource="true" generated="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testStubDebug/res" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testStubDebug/resources" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testStubDebug/assets" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testStubDebug/aidl" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testStubDebug/java" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testStubDebug/rs" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testStubDebug/shaders" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/stub/res" type="java-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/stub/resources" type="java-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/stub/assets" type="java-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/stub/aidl" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/stub/java" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/stub/jni" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/stub/rs" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/stub/shaders" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testStub/res" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testStub/resources" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testStub/assets" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testStub/aidl" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testStub/java" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testStub/rs" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testStub/shaders" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/androidTestStub/res" type="java-test-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/androidTestStub/resources" type="java-test-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/androidTestStub/assets" type="java-test-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/androidTestStub/aidl" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/androidTestStub/java" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/src/androidTestStub/jni" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/androidTestStub/rs" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTestStub/shaders" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/debug/res" type="java-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/debug/resources" type="java-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/debug/assets" type="java-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/debug/aidl" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/debug/java" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/debug/jni" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/debug/rs" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/debug/shaders" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testDebug/res" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testDebug/resources" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testDebug/assets" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testDebug/aidl" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testDebug/java" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testDebug/rs" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testDebug/shaders" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTestDebug/res" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTestDebug/resources" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTestDebug/assets" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTestDebug/aidl" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTestDebug/java" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTestDebug/rs" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTestDebug/shaders" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/main/res" type="java-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/main/resources" type="java-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/main/assets" type="java-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/main/aidl" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/main/java" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/main/jni" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/main/rs" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/main/shaders" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/androidTest/res" type="java-test-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/androidTest/resources" type="java-test-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/androidTest/assets" type="java-test-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/androidTest/aidl" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/androidTest/java" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/src/androidTest/jni" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/androidTest/rs" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTest/shaders" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/test/res" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/test/resources" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/test/assets" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/test/aidl" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/test/java" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/test/rs" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/test/shaders" isTestSource="true" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/assets" />
-      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/bundles" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/blame" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/check-manifest" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/classes" />
-      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/coverage-instrumented-classes" />
-      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/dependency-cache" />
-      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/dex" />
-      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/dex-cache" />
-      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/jars" />
-      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.0/jars" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/incremental" />
-      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/jacoco" />
-      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/javaResources" />
-      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/libs" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/javaPrecompile" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/jniLibs" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/lint" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/manifests" />
-      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/ndk" />
-      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/pre-dexed" />
-      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/proguard" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/prebuild" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/processing-tools" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/res" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/rs" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/shaders" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/splits-support" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/symbols" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/tmp" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/transforms" />
       <excludeFolder url="file://$MODULE_DIR$/build/outputs" />
       <excludeFolder url="file://$MODULE_DIR$/build/tmp" />
     </content>
-    <orderEntry type="jdk" jdkName="Android API 23 Platform" jdkType="Android SDK" />
+    <orderEntry type="jdk" jdkName="Android API 26 Platform" jdkType="Android SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" exported="" name="jsr250-api-1.0" level="project" />
-    <orderEntry type="library" exported="" name="javax.inject-1" level="project" />
-    <orderEntry type="library" exported="" name="dagger-producers-2.0-beta" level="project" />
-    <orderEntry type="library" exported="" name="dagger-2.0.1" level="project" />
-    <orderEntry type="library" exported="" name="appcompat-v7-23.0.0" level="project" />
-    <orderEntry type="library" exported="" name="android-apt-1.7" level="project" />
-    <orderEntry type="library" exported="" name="dagger-compiler-2.0.1" level="project" />
-    <orderEntry type="library" exported="" name="support-v4-23.0.0" level="project" />
-    <orderEntry type="library" exported="" name="guava-18.0" level="project" />
-    <orderEntry type="library" exported="" name="support-annotations-23.0.0" level="project" />
+    <orderEntry type="library" name="com.android.support:support-media-compat-26.1.0" level="project" />
+    <orderEntry type="library" name="com.android.support:support-compat-26.1.0" level="project" />
+    <orderEntry type="library" name="com.google.code.findbugs:jsr305:3.0.1@jar" level="project" />
+    <orderEntry type="library" name="com.google.dagger:dagger-android-2.11" level="project" />
+    <orderEntry type="library" name="android.arch.lifecycle:common:1.0.0@jar" level="project" />
+    <orderEntry type="library" name="android.arch.core:common:1.0.0@jar" level="project" />
+    <orderEntry type="library" name="com.android.support:support-fragment-26.1.0" level="project" />
+    <orderEntry type="library" name="com.google.dagger:dagger-android-support-2.11" level="project" />
+    <orderEntry type="library" name="javax.inject:javax.inject:1@jar" level="project" />
+    <orderEntry type="library" name="com.android.support:support-vector-drawable-26.1.0" level="project" />
+    <orderEntry type="library" name="com.android.support:support-v4-26.1.0" level="project" />
+    <orderEntry type="library" name="android.arch.lifecycle:runtime-1.0.0" level="project" />
+    <orderEntry type="library" name="com.android.support:appcompat-v7-26.1.0" level="project" />
+    <orderEntry type="library" name="com.android.support:animated-vector-drawable-26.1.0" level="project" />
+    <orderEntry type="library" name="com.android.support:support-annotations:26.1.0@jar" level="project" />
+    <orderEntry type="library" name="com.google.dagger:dagger:2.11@jar" level="project" />
+    <orderEntry type="library" name="com.android.support:support-core-utils-26.1.0" level="project" />
+    <orderEntry type="library" name="com.android.support:support-core-ui-26.1.0" level="project" />
   </component>
 </module>
